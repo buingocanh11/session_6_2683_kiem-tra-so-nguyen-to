@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên tố</title>
+</head>
+<body>
+<script>
+    function isPrime(numb) {
+        let check = true;
+        if(numb<2){
+            check = false;
+        }
+        for (let i=2; i<numb; i++){
+            if(numb%i == 0){
+                check = false;
+                break;
+            } else {
+                check = true;
+            }
+        }
+
+    return check;
+    }
+    function listPrime() {
+        let primes = [];
+        for (i=1; i<10000; i++){
+            if (isPrime(i) == true){
+                primes.push(i);
+            }
+        }
+        return primes;
+    }
+    document.write(listPrime());
+
+</script>
+</body>
+</html>
